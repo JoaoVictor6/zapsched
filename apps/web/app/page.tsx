@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge";
+import { NotificationExampleSection } from "./components/NotificationExampleSection";
 
 const BackgroundCircles = () => {
   const defaultCircleStyle = 'w-[300px] h-[300px] z-1 rounded-full absolute blur-[267px]';
@@ -10,7 +11,6 @@ const BackgroundCircles = () => {
     </>
   )
 }
-
 const HomeCopy = () => {
   return (
     <section className="p-4 grid gap-6">
@@ -23,17 +23,6 @@ const HomeCopy = () => {
     </section>
   );
 }
-
-const NotificationExampleSection = () => {
-  const defaultCircleStyle = 'absolute rounded-full blur-[119px] bg-[#3A86FF]'
-  return (
-    <section className={twMerge('shadow-inner rounded-[20px] bg-[#202020] px-6 py-5', 'relative', 'w-[426px] h-[300px]')}>
-      <div aria-hidden className={twMerge(defaultCircleStyle, 'opacity-[0.59] top-[30px] right-[36px] w-[114px] h-[114px]')} />
-      <div aria-hidden className={twMerge(defaultCircleStyle, 'bottom-[106px] left-[48px] w-[68px] h-[68px]')} />
-    </section>
-  );
-}
-
 export default function Home() {
   return (
     <main className={twMerge('w-screen h-screen bg-[#000914] relative')}>
