@@ -1,3 +1,6 @@
+import { useMotionValue, useTransform } from "framer-motion"
+import * as motion from "framer-motion/client"
+
 export enum NotificationVariant {
   EDIT = "EDIT",
   REMOVE = "REMOVE",
@@ -11,5 +14,9 @@ export type NotificationProps = {
 }
 
 export function Notification({ variant }: NotificationProps) {
-  return <h1>Notification {variant}</h1>
+  return (
+    <motion.section className="bg-red" initial={{ scale: 0.2 }} whileInView={{ scale: 1 }}>
+      {variant}
+    </motion.section>
+  )
 }
